@@ -34,3 +34,5 @@ export default class NavigationComponent extends Component {
         )
     }
 }
+
+
