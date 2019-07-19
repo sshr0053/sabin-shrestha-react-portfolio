@@ -17,8 +17,7 @@ export default class Login extends Component {
 
         handleChange(event) {
             this.setState({
-               [event.target.name]: event.target.value,
-               errorText: ""
+               [event.target.name]: event.target.value
             });
         }
 
@@ -32,19 +31,9 @@ export default class Login extends Component {
             },
             { withCredentials: true }
             ).then(response => {
-                if(response.data.status === 'created') {
-                    console.log("You have logged on")
-                } else {
-                    this.setState({
-                        errorText: "Wrong Email or Password"
-                    })
-                }
-            }).catch(error => {
-                this.setState({
-                    errorText: "An error occurred" 
-                });
-            });
-
+                console.log("response", response);
+            })
+g
             event.preventDefault();
         }
 
@@ -52,8 +41,6 @@ export default class Login extends Component {
         return (
             <div>
                 <h1>LOGIN HERE TO ACCESS YOUR DASHBOARD</h1>
-
-                <div>{this.state.errorText}</div>
 
                 <form onSubmit={this.handleSubmit}>
                     <input 
