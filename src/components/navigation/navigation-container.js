@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
  
 const  NavigationComponent = (props) => {
     const dynamicLink = (route, linkText) => {
@@ -33,8 +33,8 @@ const  NavigationComponent = (props) => {
                 SABIN SHRESTHA
                 </div>
             </div>
-        )
-    }
+        );
+    };
 
     export default NavigationComponent;
 
